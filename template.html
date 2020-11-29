@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title><?php echo $profile['full_name'] . " Social Media Profile "; ?></title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container-fluid edit_profile_head yp3">
+  <div class="profile_preview col-lg-12 col-sm-12 col-xs-12">
+    <div class="box gf7">
+      <div class="preview_head g10 df9">
+        <div class="se5">
+          <div class="mn3 df92">
+            <h2>
+              <center><?php echo $profile['full_name']; ?>            </h2></center>
+	      <div class="d-flex flex-row bd-highlight justify-content-center" style="margin-left: 8.7%; margin-right: 8.7%;">
+         <a rel="noopener" id="addTo" target="_blank" class="btn btn-primary AddBtn" style="color: black;" href="https://social.rhcp011235.me/vcard.php?username=<?= $profile['username'] ?>"><b>Add to Contacts </b><i class="fa fa-download"></i></a>
+            <p>
+                          </p>
+                      </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+<?php if($profile['instagram_username']) : ?>
+
+      <div class="xxx">
+        
+		<a href="https://www.instagram.com/<?php echo $profile['instagram_username']; ?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">			
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 instagram_icon"> <i class="fa fa-instagram" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+            		<h2 style="width:100%;">Instagram</h2>	
+			<br>
+			            </span></div>
+        </div>
+		</a>
+
+<?php endif; ?>
+
+<?php if($profile['facebook_username']) : ?>
+
+ <a href="https://www.facebook.com/<?=$profile['facebook_username'] ?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 facebook_icon"> <i class="fa fa-facebook" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+                        <h2 style="width:100%;">Facebook</h2>
+                        <br>
+                                    </span></div>
+        </div>
+              	</a>
+<?php endif; ?>
+
+<?php if($profile['twitter_username']) : ?>
+
+ <a href="https://www.twitter.com/<?=$profile['twitter_username'] ?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 twitter_icon"> <i class="fa fa-twitter" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+                        <h2 style="width:100%;">Twitter</h2>
+                        <br>
+                                    </span></div>
+        </div>
+              	</a>
+<?php endif; ?>
+
+
+
+
+
+<?php if($profile['snapchat_username']) : ?>        
+		<a href="https://www.snapchat.com/add/<?=$profile['snapchat_username'] ?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">			
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 snapchat_icon"> <i class="fa fa-snapchat" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+            		<h2 style="width:100%;">Snapchat</h2>	
+			<br>
+			            </span></div>
+        </div>
+		</a>
+
+
+<?php endif; ?>
+
+
+
+
+<?php if($profile['whatsapp_username']) : ?>
+                <a href="https://api.whatsapp.com/send?phone=<?=$profile['whatsapp_username'] ?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 whatsapp_icon"> <i class="fa fa-whatsapp" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+                        <h2 style="width:100%;">WhatsApp</h2>
+                        <br>
+                                    </span></div>
+        </div>
+              	</a>
+
+
+<?php endif; ?>
+
+
+
+<?php if($profile['youtube_username']) : ?>        
+		<a href="https://www.youtube.com/<?= $profile['youtube_username'] ?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">			
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 youtube_icon"> <i class="fa fa-youtube" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+            		<h2 style="width:100%;">Youtube</h2>	
+			<br>
+			            </span></div>
+        </div>
+		</a>
+
+<?php endif; ?>
+
+<?php if($profile['tiktok_username']) : ?>
+        
+		<a href="https://vm.tiktok.com/<?=$profile['tiktok_username']?>/" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">			
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 tiktok_icon"> <i class="fa fa-tiktok" aria-hidden="true"></i> <span class="col-sm-10" style="padding:15px 0;">
+            		<h2 style="width:100%;">Tiktok</h2>	
+			<br>
+			            </span></div>
+        </div>
+		</a>
+        
+<?php endif; ?>
+
+<?php if($profile['email']) : ?>
+		<a href="mailto:<?= $profile['email']?>" target="_blank" style="color: #000000; text-decoration:none; cursor:pointer;">			
+        <div class="pre_insta g10 df8  ">
+          <div class="lg se5 email_icon"> <i class="fa fa-envelope-square" aria-hidden="true"></i> <span class="col-sm-10" style="padding:0;">
+            		<h2 style="width:100%;">Email</h2>	
+			<br>
+			<?= $profile['email']?>            </span></div>
+        </div>
+		</a>
+
+<?php endif; ?>
+
+              </div>
+
+
+<?php if($footer) : ?>
+
+
+            <div class="pre_footer g10 fds vv_c9 ">
+        <div class="se5">
+          <h2><a href="https://www.tappy.app/" target="_blank"><img src="images/logo.png" class="logo" /></a></h2>
+          <p style="text-align:center;">Powered by <a href="https://www.tappy.app/" target="_blank">Tappy smart card</a></p>
+         <p><small> Tappy, LLC.
+Listed company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</small></p>
+        </div>
+      </div>
+
+<?php endif; ?>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<style>
+.none{ display: none;}
+</style>
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.min.js" ></script>
+
+</body>
+
+</html>
+
