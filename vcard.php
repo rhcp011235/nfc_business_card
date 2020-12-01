@@ -59,7 +59,8 @@
 	{
     		$vCard .= "TEL;TYPE=work,voice:" . $phone_number . "\r\n"; 
   	}
-
+	
+	$vCard .= "URL:" . "https://social.rhcp011235.me/" . $username . "\r\n";
   	$vCard .= "END:VCARD\r\n";
   	echo $vCard;
 
